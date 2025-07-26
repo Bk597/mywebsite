@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Phander Valley</title>
+    
+    <style>
+        body {
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-shadow: yellow;
+            
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        
+            background-color:white;
+            border: 1px solid brown;
+        
+            box-shadow: 50px 12px brown;
+            box-shadow: 10px 12px  5px brown;
+            box-shadow: 10px 12px 5px 100px yellow;
+            text-shadow: 10px 12px whites;
+        }
+        
+        header {
+            background: linear-gradient(45deg, #4CAF50, #2E8B57);
+            color:black;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+            text-shadow: 3px 3px aqua;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-shadow: 2px 2px aqua;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+         .container{
+            background-color: white;
+
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        
+        .section {
+            display: none;
+            padding: 2rem;
+            max-width: 1100px;
+            margin:100px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+            color:black;
+            font-size: 20px;
+           font-weight: bold;
+           font-family: 'Poppins', sans-serif;
+
+
+            
+        }
+        
+        .active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #222;
+            color: white;
+            margin-top: 2rem;
+            text-shadow: 2px 2px aqua;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            background: #2E8B57;
+        }
+        
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+        
+        .dark-mode .section {
+            background: #444;
+            color: white;
+        }
+       
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+        
+        window.onload = () => {
+            showSection('about');
+        };
+        
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+<div class="container">
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <header>
+        <h1>WELCOME TO PHANDER VALLEY</h1>
+        <p>Discover the beauty and charm of Phander</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('history')">History</a>
+        <a href="#" onclick="showSection('attractions')">Attractions</a>
+        <a href="#" onclick="showSection('culture')">Culture</a>
+    </nav>
+</div>
+    <section class="section active" id="about">
+        <h2 style="text-shadow: 2px 2px aqua;">About Phander</h2>
+        <p>Phander Valley has a rich history, dating back to ancient trade routes that connected Central Asia and the Indian subcontinent.
+            Phander Valley is a stunning and serene destination nestled in the Ghizer District of Gilgit-Baltistan,
+             Pakistan. Known for its breathtaking natural landscapes, the valley is characterized by rolling hills, vibrant green fields, 
+             crystal-clear rivers, and the strikingly beautiful Phander Lake. This scenic area, often called the "Switzerland of Pakistan,"
+              offers visitors a perfect blend of natural beauty, cultural heritage, and tranquil ambiance.</p>
+              <br>
+            <img src="ph.jpg" alt="beautiful" width="800" height="400">
+                        <h1 style="text-shadow: 2px 2px aqua;">Highlights of Phander Valley</h1>
+                       <h2 style="text-shadow: 2px 2px aqua;" > Phander Lake</h2> The valley's most famous attraction, Phander Lake is an azure-blue lake surrounded by poplar trees, meadows, and rugged mountains. Its clear, still waters make it ideal for fishing and boating, and the reflections of the surrounding landscape on the lake's surface make it a paradise for photographers.
+                       <br><br>
+                       <img src="ghh.jpg" alt=" beautiful" width="800" height="400">
+                       <h2 style="text-shadow: 2px 2px aqua;"> Nature and Landscape</h2> Valley is blessed with lush green fields, terraced slopes, and thick forests. The Ghizer River, which winds through the valley, adds to its charm with its clear waters, creating a stunning contrast against the greenery and rocky hills.
+                        
+                       <br><br>
+                       <img src="jk.jpg" alt="beautiful" width="800" height="300" >
+                       <h2 style="text-shadow: 2px 2px aqua;"> Peaceful Atmosphere</h2> One of the main reasons visitors are drawn to Phander Valley is its peaceful and serene environment. Unlike busier tourist spots, Phander retains a sense of untouched beauty and tranquility. It is a perfect place for those seeking solitude, relaxation, and a connection with nature.
+                        
+                       <br><br>
+                       <img src="ali.jpg" alt="beautiful" width="800" height="400">
+                       <h2 style="text-shadow: 2px 2px aqua;"> Friendly Community</h2> people of Phander Valley are known for their hospitality and kindness. They belong to ethnic groups such as Wakhi and Shina, who have maintained their unique cultures, languages, and traditions. The local community takes pride in their heritage and is always willing to share it with visitors.
+                       <br><br>
+                       <img src="hos.jpg" alt="beautiful" width="800" height="400">
+                       <h2 style="text-shadow: 2px 2px aqua;"> Outdoor Activities</h2> Phander Valley offers plenty of activities for nature lovers and adventure seekers. Fishing in Phander Lake is a popular pastime, as the lake is stocked with trout. There are also numerous hiking trails, including treks that lead to nearby villages, lakes, and viewpoints offering panoramic views of the valley.
+                       <br><br>
+                       <img src="fish.jpg" alt="beautiful" width="800" height="400">
+                        <h2 style="text-shadow: 2px 2px aqua;">Traditional Village</h2> Phander Lake and the valley are small traditional villages where visitors can observe daily life, experience the unique culture of the local people, and even stay in homestays for a more immersive experience.
+                        
+                        <br><br>
+                        <img src="tra.jpg" alt="beautiful" width="800" height="400">
+                        <h1 style="text-shadow: 2px 2px aqua;">Best Time to Visit</h1>
+                        The best time to visit Phander Valley is from May to October, when the weather is warm, and the valley is in full bloom. During this time, the fields and meadows are vibrant green, and the weather is mild, making it ideal for outdoor activities and sightseeing. In winter, the valley is often covered in snow, making access more challenging but offering a magical winter landscape for those willing to brave the cold.
+                        <br><br><img src="ph.jpg" alt="beautiful" width="800" height="400">
+                      <h1 style="text-shadow: 2px 2px aqua;"> How to Get to Phander Valley</h1>
+                        To reach Phander Valley, travelers typically take a scenic road trip from Gilgit, the regional capital, located about 170 kilometers away. The journey offers breathtaking views as it follows the Ghizer River through a series of valleys and passes. There are also limited options for public transport from Gilgit, or you can hire private transport to explore the area more comfortably.
+                        Phander Valley is a hidden gem in Pakistan's northern region, offering an escape into nature, a glimpse into traditional culture, and an unforgettable experience of beauty and serenity. Whether you're interested in photography, trekking, fishing, or simply unwinding in a peaceful environment, Phander Valley is a destination that promises to captivate any visitor.
+                    
+                     
+    </section>
+
+    <section class="section" id="history">
+        <h2 style="text-shadow: 2px 2px aqua;">History of Phander Valley</h2>
+        Phander Valley holds a rich cultural and historical significance in the region. Historically, it served as a strategic area within the ancient trade routes between Central Asia and the Indian subcontinent. In earlier centuries, the valley was a part of the larger cultural and trade networks of the Silk Road, connecting different regions through passes and trade routes.
+            
+        The valley is home to diverse ethnic communities, primarily the Wakhi and Shina people, each with unique languages, traditions, and cultural practices. Over centuries, these communities have maintained their cultural identity while also adopting influences from neighboring regions. The people of Phander Valley are known for their hospitality, warmth, and resilience in a mountainous terrain that offers both challenges and beauty.
+        
+        Phander Lake, the valley's centerpiece, has its own historical and cultural importance. According to local legends, the lake has been a source of myths and stories passed down through generations. Many believe the lake is sacred, and it has been part of local folklore as a symbol of peace and natural beauty.
+        
+        In recent years, Phander Valley has become increasingly popular as an eco-tourism destination due to its unspoiled beauty and peaceful ambiance. The valley’s rivers, forests, and trails offer numerous activities, such as fishing, hiking, and exploring traditional villages. Today, Phander Valley remains a symbol of the rich cultural heritage and natural splendor of Gilgit-Baltistan, preserving its traditions while welcoming those who seek to experience its tranquil landscape and timeless charm.
+        <br><br>
+        <img src="hos.jpg" alt="beautiful" width="800" height="400">
+        <br><br>
+        <img src="cv.jpg" alt="beautiful" width="800" height="400">
+        <br><br>
+        <img src="as.jpg" alt="beautiful" width="800" height="400">
+        
+    </p>
+       
+            </section>
+    
+
+    <section class="section" id="attractions">
+        <h2 style="text-shadow: 2px 2px aqua;">Attractions</h2>
+        <p>From Phander Lake to Shandur Pass, explore the top attractions of this scenic valley.</p>
+
+
+        <h3 style="text-shadow: 2px 2px aqua;"> Phander Lake</h3>
+            Description: Known as the “Heart of Phander Valley,” Phander Lake is a breathtaking turquoise lake surrounded by green meadows, poplar trees, and mountains. Its crystal-clear waters make it ideal for boating, fishing, and photography. The calmness of the lake and its scenic surroundings are perfect for relaxing and picnicking.
+            Activities: Fishing (especially trout), boating, picnicking, and photography.
+            <br><br>
+             <img src="rt.jpg" alt="beautiful" width="800" height="400">
+            <h3 style="text-shadow: 2px 2px aqua;"> Ghizer River</h3>
+            Description: The Ghizer River flows through Phander Valley, creating a stunning contrast with its clear blue waters against the valley’s lush greenery. It’s a popular spot for fishing and is surrounded by trails perfect for leisurely walks.
+            Activities: Fishing, riverside picnics, hiking, and scenic drives.
+            <br><br>
+             <img src="gh.jpg" alt="beautiful" width="800" height="400">
+            <h3 style="text-shadow: 2px 2px aqua;"> Viewpoint of Phander Valley</h3>
+            Description: There is a viewpoint near Phander Valley that offers a panoramic view of the valley below. This viewpoint gives a sweeping view of Phander Lake, the Ghizer River, and the surrounding fields and forests. It’s an ideal spot to witness sunrise or sunset.
+            Activities: Photography, sightseeing, and picnicking.
+            <br><br>
+             <img src="jk.jpg" alt="beautiful" width="800" height="400">
+            <h3 style="text-shadow: 2px 2px aqua;"> Local Villages</h3>
+            Description: Several traditional villages dot Phander Valley, such as Gulaghmuli and Hundarap. These villages are rich in culture and hospitality. Walking through these villages offers a glimpse into the local way of life, architecture, and agricultural practices.
+            Activities: Cultural immersion, meeting locals, and exploring traditional Wakhi and Shina culture.
+            <br><br>
+             <img src="tra.jpg" alt="beautiful" width="800" height="400">
+            <h3 style="text-shadow: 2px 2px aqua;"> Hundarap Lake</h3>
+            Description: Located near Phander Valley, Hundarap Lake is a beautiful lake surrounded by mountains and meadows. It is less crowded than Phander Lake, offering a more secluded experience.
+            Activities: Fishing, picnicking, hiking, and photography.
+           
+            <br><br>
+             <img src="fish.jpg" alt="beautiful" width="800" height="400">
+            <h3 style="text-shadow: 2px 2px aqua;"> Khalti Lake</h3>
+            Description: Khalti Lake is a glacial lake located about 30 km from Phander. It is known for its deep blue color and cold, clear waters. In winter, the lake freezes over, creating a unique landscape, while in summer, it’s a popular spot for fishing and picnicking.
+            Activities: Fishing, sightseeing, photography, and picnicking.
+            <br><br>
+            <img src="lake.webp" alt="beautiful" width="800" height="400">
+            <br><br>
+            <img src="kh.jpg" alt="beautiful" width="800" height="400">
+            <h3 style="text-shadow: 2px 2px aqua;"> Teru Valley</h3>
+            Description: Teru Valley is located close to Phander and offers some of the region’s best landscapes with lush green fields, fruit trees, and rugged mountains. It’s a scenic area to explore on foot or by vehicle.
+            Activities: Hiking, exploring local life, and nature photography.
+            <h3 style="text-shadow: 2px 2px aqua;">Shandur pass</h3>
+                        Description: Though a bit farther away, Shandur Pass is famous for hosting the annual
+                         Shandur Polo Festival, a cultural event featuring polo matches between 
+                         Gilgit-Baltistan and Chitral teams. The pass itself, located at 12,200 feet, 
+                         offers breathtaking mountain scenery.
+
+            Activities: Attending the Shandur Polo Festival (July), sightseeing, and exploring the high-altitude pass.
+            Each of these sites adds to the charm of Phander Valley, whether you're interested in scenic landscapes, cultural experiences, outdoor adventure, or simply a peaceful retreat in nature.
+            <br><br>
+             <img src="polo.jpg" alt="beautiful" width="800" height="400">
+             <br><br>
+            <img src="sh.jpg" alt="beautiful" width="800" height="400">
+            </p>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Discover Phander Valley</p>
+    </footer>
+
+
+    </section>
+
+
+         <!-- Culture Section -->
+    <section class="section" id="culture">
+        <h2 style="text-shadow: 2px 2px aqua;">Culture of Phander Valley</h2>
+        <p>
+            The culture of Phander Valley is a unique blend of traditional practices, languages, and lifestyles that reflect the heritage of its people, primarily the Wakhi and Shina communities. Here’s a closer look at some cultural elements that make Phander Valley distinct:
+
+<h3 style="text-shadow: 2px 2px aqua;"> Languages</h3>
+Khowar and Shina Languages: The people in Phander Valley primarily speak Khowar and Shina. These languages are
+ part of the local heritage, passed down through generations and forming an integral part of the 
+ community’s identity.
+ Due to tourism and inter-regional interactions, Urdu is also commonly spoken, making communication
+ easier with visitors from other parts of Pakistan. <br><br>
+
+<img src="ng.jpg" alt="beautiful" width="800" height="400">
+
+
+<h3 style="text-shadow: 2px 2px aqua;">Clothing</h3>
+Men: Men in Phander Valley often wear traditional shalwar kameez, along with a woolen cap called a "pakol,"
+ especially in the colder months.
+Women: Women traditionally wear brightly colored dresses, with shawls or scarves covering their heads.
+ During festivals, their attire may include intricate embroidery that reflects local artistic styles.
+ <br><br>
+<img src="cu.jpg" alt="beautiful" width="800" height="400">
+<h3 style="text-shadow: 2px 2px aqua;">Hospitality</h3>
+Warm Welcome: The people of Phander are known for their warmth and hospitality. It’s common for locals to invite visitors for tea or a meal, showing their eagerness to share their culture.
+Community Gatherings: Community gatherings are an essential part of life here, where stories, food, and traditional music are shared among families and friends.
+<br><br>
+<img src="hos.jpg" alt="beautiful" width="800" height="400">
+
+
+
+
+<h3 style="text-shadow: 2px 2px aqua;"> Cuisine</h3>
+
+ Being a mountainous region, dairy is a staple in the local diet. Homemade butter, yogurt, and cheese are widely consumed.
+ <br>
+Traditional Dishes:
+ Popular dishes include "shoshp,mul,mulida,shashalnk"  and dawdaw , all are made from floor,water,salt,milk and ghee.
+ <br>
+Chai (Tea): Tea is a favorite drink and is served frequently to guests, often accompanied by local bread called khista shapik.
+<br><br>
+<img src="khista.jpg" alt="beautiful" height="500" width="800">
+<br><br>
+<img src="cv.jpg" alt="beautiful" height="500" width="800">
+<br><br>
+<h3 style="text-shadow: 2px 2px aqua;" >Music and Dance</h3>
+Traditional Instruments:
+<br>
+ Instruments like the "dadang" (a type of drum) and flutes are commonly played during gatherings and festivals.
+ <br>
+ Folk Dances:
+ <br>
+ Dance forms such as the “Attan” are performed, especially during weddings and cultural celebrations, symbolizing unity and joy.
+<br><br>
+<img src="dan.jpg" alt="beautiful" width="800" height="400">
+<h3 style="text-shadow: 2px 2px aqua;">festival</h3>
+Religious Festivals: Islamic festivals such as Eid are celebrated with enthusiasm, involving communal prayers,
+ feasts, and social visits.
+
+Shandur Polo Festival: Although technically held at Shandur Pass, the festival has cultural importance 
+in the region. Polo teams from Gilgit-Baltistan, including players from Phander, participate in this 
+high-altitude polo tournament.
+
+<br><br>
+<img src="sh.jpg" alt="beautiful" width="800" height="400">
+<h3 style="text-shadow: 2px 2px aqua;"> Handicrafts and Art</h3>
+Embroidery and Weaving: Women in Phander Valley create beautifully embroidered clothes and woven carpets that reflect the valley's vibrant colors and traditional designs.
+Craftsmanship: Some families craft items from wood, producing utensils, decorative pieces, and tools that reflect local skills.
+sPhander Valley’s culture remains largely untouched by modernity, allowing visitors to experience an authentic and serene way of life amidst breathtaking landscapes. This connection to tradition, coupled with the community’s openness to share its heritage, makes Phander a culturally enriching destination for anyone seeking to understand the lifestyle and values of the northern valleys of Pakistan.
+
+<br><br>
+<img src="cr.jpg" alt="beautiful" width="800" height="400">
+<br><br>
+<img src="vb.jpg" alt="beautiful" width="800" height="400">
+
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Discover Phander Valley</p>
+    </footer>
+</body>
+</html>
